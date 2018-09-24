@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+
+
+
+
+  <input id="nbr" placeholder="listvoiture"></input>
+  <button onclick="listvoiture()">Resultat</button>
+  <button onclick="affvoit()">Tout Les marques</button>
+  <p id="reslt"></p>
+  <br>
+  <p id="demo"></p>
+  <script>
+    var data = [{
+      "marque": "bmw",
+      "modele": "2012",
+    }, {
+      "marque": "ford",
+      "modele": "2008"
+    }, {
+      "marque": "Seat",
+      "modele": "2012",
+    }, {
+      "marque": "Opel",
+      "modele": "2004"
+    }, ]
+
+    var data2 = "";
+
+    /* function listvoiture() {
+       var x = document.getElementById("nbr").value;
+       obj = JSON.parse(data);
+       obj.voiture1.forEach(voit => {
+         console.log(voit);
+
+
+       });
+       document.getElementById("reslt").innerHTML = obj.voiture1[x].marque + " " + obj.voiture1[x].modele;
+
+     }*/
+
+    function affvoit() {
+       for (i = 0; i < data.length; i++) {
+       data2 += data[i].marque + "<br>" + data[i].modele + "<br><p>****</p>";
+       }
+     
+         document.getElementById("demo").innerHTML = data2;
+
+       }
+   /* function affvoit() {
+
+      $(data).each(function (index, r) {
+        $('#demo').append('Marque : ' + r.marque + '<br>');
+        $('#demo').append('Modele : ' + r.modele + '<br>');
+
+      });*/
+
+    
+  </script>
+</body>
+
+</html>
